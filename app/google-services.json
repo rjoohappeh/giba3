@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "849354997713",
+    "firebase_url": "https://giba-51b3b.firebaseio.com",
+    "project_id": "giba-51b3b",
+    "storage_bucket": "giba-51b3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849354997713:android:3a3c81370ea9fec2",
+        "android_client_info": {
+          "package_name": "com.capstone.giba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849354997713-cr62683155faj9quh8pk6l6nl6hd46qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capstone.giba",
+            "certificate_hash": "dec5f7f16a6d1db4f03308333248dc40f62e4cbc"
+          }
+        },
+        {
+          "client_id": "849354997713-rdrf09r8f64or7epjei44thuklli7f6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5llAVG0angkFbdhxUKFWrAVBOGnhQe6U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849354997713-rdrf09r8f64or7epjei44thuklli7f6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
