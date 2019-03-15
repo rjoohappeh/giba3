@@ -3,6 +3,7 @@ package com.capstone.giba;
 public class Host
 {
     private String email;
+    private int ein;
     private String firstName;
     private String lastName;
     private String address;
@@ -14,8 +15,9 @@ public class Host
 
     // Overloaded constructor
     public Host(String email, String firstName, String lastName,
-                String address, String phoneNum) {
+                String address, String phoneNum, int ein) {
         this.email = email;
+        this.ein = ein;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -32,6 +34,8 @@ public class Host
         this.email = email;
     }
 
+    // getter for @ein
+    public int getEin(int ein) {return ein; }
     // getter for firstName
     public String getFirstName() {
         return firstName;
