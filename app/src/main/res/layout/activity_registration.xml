@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
@@ -11,8 +12,6 @@
     <include layout="@layout/footer" />
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
@@ -22,17 +21,20 @@
 
         <EditText
             android:id="@+id/editTextEin"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter Organization EIN"
+            android:inputType="number"
+            android:maxLength="9"
             android:maxLines="1"
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter Email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
@@ -41,47 +43,61 @@
 
         <EditText
             android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter Password"
+            android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true"
             />
 
         <EditText
             android:id="@+id/editTextFirstName"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter First Name"
+            android:inputType="textPersonName"
             android:maxLines="1"
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/editTextLastName"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter Last Name"
+            android:inputType="textPersonName"
             android:maxLines="1"
-            android:singleLine="true"
-            />
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/editTextAddress"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:hint="Enter Address"
+            android:inputType="textPostalAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
             android:maxLines="1"
             android:singleLine="true"
             />
 
-        <EditText
-            android:id="@+id/editTextPhoneNumber"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/register"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Phone Number"
-            android:maxLines="1"
-            android:singleLine="true"
-            />
+            android:layout_marginTop="20dp"
+            android:text="Register" />
     </LinearLayout>
 </RelativeLayout>

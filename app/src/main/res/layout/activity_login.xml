@@ -36,7 +36,7 @@
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:hint="@string/prompt_email"
             android:inputType="textEmailAddress"
@@ -45,9 +45,9 @@
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_password"
+            android:hint="Password"
             android:imeActionId="6"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionUnspecified"
@@ -57,27 +57,27 @@
 
         <CheckBox
             android:id="@+id/host_check_box"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:text="I am a Host" />
 
         <CheckBox
             android:id="@+id/volunteer_check_box"
-            android:layout_width="match_parent"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:text="I am a Volunteer" />
 
         <Button
             android:id="@+id/email_sign_in_button"
             style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Sign In"
             android:textStyle="bold" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:gravity="center"
@@ -85,9 +85,9 @@
 
         <Button
             android:id="@+id/registerButton"
-            android:layout_width="match_parent"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="Register" />
     </LinearLayout>
 </RelativeLayout>

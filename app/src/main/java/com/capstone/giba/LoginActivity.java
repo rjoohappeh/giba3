@@ -28,6 +28,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,8 +77,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private View mHostCheckBox;
-    private View mVolunteerCheckBox;
+    private CheckBox mHostCheckBox;
+    private CheckBox mVolunteerCheckBox;
 
     @Override
     public void onStart()
@@ -134,17 +137,29 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        mHostCheckBox = findViewById(R.id.host_check_box);
+        mVolunteerCheckBox = findViewById(R.id.volunteer_check_box);
 
-        Button registerButton = (Button) findViewById(R.id.registerButton);
+        final Button registerButton = (Button) findViewById(R.id.registerButton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
+                if (mHostCheckBox.isChecked() && mVolunteerCheckBox.isChecked()) {
+                    registerButton.setError("You cannot check both \"I am a Host\" and \"I am a volunteer\".")
+                }
+                else if (mHostCheckBox.isChecked()) {
+                    startActivity(new Intent(LoginActivity.this, HostRegistrationActivity.class));
+                }
+                else if (mVolunteerCheckBox.isChecked()) {
+                    startActivity(new Intent(LoginActivity.this, VolunteerRegistrationActivity.class));
+                }
+                else {
+                    registerButton.setError("You must Check either \"I am a Host\" or \"I am a volunteer\".");
+                }
             }
         });
     }
-
 
     private void createAccount(String email, String password) {
 
